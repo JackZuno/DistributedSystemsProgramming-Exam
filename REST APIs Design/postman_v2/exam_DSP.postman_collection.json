@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "bd2600da-90b7-4f5c-ba2d-cd32b3a3db39",
+		"name": "exam_DSP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32681166"
+	},
+	"item": [
+		{
+			"name": "userActions",
+			"item": [
+				{
+					"name": "user_1",
+					"item": [
+						{
+							"name": "login_user_1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"email\": \"user.dsp@polito.it\",\r\n  \"password\": \"password\",\r\n  \"self\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/authenticator?type=login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"authenticator"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "login"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout_user_1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/users/authenticator?type=logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"authenticator"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "logout"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user_5",
+					"item": [
+						{
+							"name": "login_user_5",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"email\": \"beatrice.golden@polito.it\",\r\n  \"password\": \"seagulls\",\r\n  \"self\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/authenticator?type=login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"authenticator"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "login"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout_user_5",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/users/authenticator?type=logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"authenticator"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "logout"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "Here there are login and logout actions"
+		},
+		{
+			"name": "filmActions",
+			"item": [
+				{
+					"name": "privateFilms",
+					"item": [
+						{
+							"name": "createPrivateFilm",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"id\": 0,\r\n  \"title\": \"Private Film generated with Postman\",\r\n  \"owner\": 0,\r\n  \"private\": true,\r\n  \"watchDate\": \"2024-01-31\",\r\n  \"rating\": 7,\r\n  \"favorite\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films"
+							},
+							"response": []
+						},
+						{
+							"name": "getSinglePrivateFilm",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3001/api/films/private/12"
+							},
+							"response": []
+						},
+						{
+							"name": "updateSinglePrivateFilm",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"id\": 0,\r\n  \"title\": \"New Title for the film created with Postman\",\r\n  \"owner\": 0,\r\n  \"private\": true,\r\n  \"watchDate\": \"2024-01-14\",\r\n  \"rating\": 5,\r\n  \"favorite\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films/private/12"
+							},
+							"response": []
+						},
+						{
+							"name": "getPrivateFilms",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3001/api/films/private"
+							},
+							"response": []
+						},
+						{
+							"name": "deletePrivateFilm",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3001/api/films/private/12"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "publicFilms",
+					"item": [
+						{
+							"name": "getPublicFilms",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public"
+							},
+							"response": []
+						},
+						{
+							"name": "getPublicFilms_pageNo2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/films/public?pageNo=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"films",
+										"public"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createPublicFilm",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"id\": 0,\r\n  \"title\": \"Public Film generated with Postman\",\r\n  \"owner\": 0,\r\n  \"private\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films"
+							},
+							"response": []
+						},
+						{
+							"name": "getSinglePublicFilm",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/13"
+							},
+							"response": []
+						},
+						{
+							"name": "updatePublicFilm",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"id\": 0,\r\n  \"title\": \"New title for the public film created with postman\",\r\n  \"owner\": 0,\r\n  \"private\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films/public/13"
+							},
+							"response": []
+						},
+						{
+							"name": "deletePublicFilm",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/13"
+							},
+							"response": []
+						},
+						{
+							"name": "getInvitedFilms",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/films/public/invited",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"films",
+										"public",
+										"invited"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reviewActions",
+			"item": [
+				{
+					"name": "delegate",
+					"item": [
+						{
+							"name": "deleteReview_fail",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/9/reviews/1"
+							},
+							"response": []
+						},
+						{
+							"name": "deleteReview_fail2",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/9/reviews/4"
+							},
+							"response": []
+						},
+						{
+							"name": "deleteReview",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/11/reviews/5"
+							},
+							"response": []
+						},
+						{
+							"name": "delegateReview",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/11/reviews/5/delegate"
+							},
+							"response": []
+						},
+						{
+							"name": "delegateReview_fail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/11/reviews/3/delegate"
+							},
+							"response": []
+						},
+						{
+							"name": "updateReview_fail",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"reviewDate\": \"2024-02-01\",\r\n  \"rating\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films/public/11/reviews/5"
+							},
+							"response": []
+						},
+						{
+							"name": "updateReview_fail2",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"reviewDate\": \"2024-02-01\",\r\n  \"rating\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films/public/11/reviews/1"
+							},
+							"response": []
+						},
+						{
+							"name": "updateReview_user5",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"review\": \"I updated the text of the review\",\r\n  \"rating\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films/public/11/reviews/5"
+							},
+							"response": []
+						},
+						{
+							"name": "deleteDelegatedReview",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/11/reviews/5/delegate"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "reviews",
+					"item": [
+						{
+							"name": "getFilmReviews",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/films/public/9/reviews",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"films",
+										"public",
+										"9",
+										"reviews"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "issueFilmReview",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"$schema\": \"string\",\r\n    \"filmId\": 11,\r\n    \"reviewerId\": 5\r\n  },\r\n  {\r\n    \"$schema\": \"string\",\r\n    \"filmId\": 11,\r\n    \"reviewerId\": 3\r\n  },\r\n  {\r\n    \"$schema\": \"string\",\r\n    \"filmId\": 11,\r\n    \"reviewerId\": 1\r\n  }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films/public/11/reviews"
+							},
+							"response": []
+						},
+						{
+							"name": "getSingleReview",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/11/reviews/5"
+							},
+							"response": []
+						},
+						{
+							"name": "updateReview",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"reviewDate\": \"2024-02-01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films/public/11/reviews/1"
+							},
+							"response": []
+						},
+						{
+							"name": "updateReview_2",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$schema\": \"string\",\r\n  \"completed\": false,\r\n  \"rating\": 5,\r\n  \"review\": \"Could be better\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/films/public/11/reviews/1"
+							},
+							"response": []
+						},
+						{
+							"name": "deleteReview",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3001/api/films/public/11/reviews/3"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

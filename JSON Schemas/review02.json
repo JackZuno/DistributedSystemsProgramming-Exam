@@ -1,0 +1,10 @@
+{
+    "$schema": "./review_schema.json",
+    "filmId": 2,
+    "reviewerId": 1,
+    "completed": false,
+    "rating": 6,
+    "review": "It could be better",
+    "delegated": 2,
+    "delegator": 3
+}
